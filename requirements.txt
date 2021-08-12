@@ -1,0 +1,6 @@
+flask
+redis
+python-dotenv
+requests
+SpeechRecognition
+word2number
