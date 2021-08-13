@@ -23,7 +23,7 @@ Base.metadata.bind = engine
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
 
-'''
+
 def wav2Vec():
     # Initialize the tokenizer
     tokenizer = Wav2Vec2Tokenizer.from_pretrained('facebook/wav2vec2-base-960h')
@@ -43,14 +43,14 @@ def wav2Vec():
     # Take argmax value and decode into transcription
     predicted_ids = torch.argmax(logits, dim=-1)
     transcription = tokenizer.batch_decode(predicted_ids)
-    print(transcription,file=sys.stderr)'''
+    print(transcription,file=sys.stderr)
 
 
 
 # add source that just speak above
 def getSpeechRecognition():
     r = sr.Recognizer()
-    voice = sr.AudioFile('recording/br.wav')
+    voice = sr.AudioFile('recording/record.wav')
     with voice as source:
         r.adjust_for_ambient_noise(source)
         audio = r.record(source)
