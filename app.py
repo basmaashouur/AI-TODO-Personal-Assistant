@@ -50,7 +50,7 @@ def wav2Vec():
 # add source that just speak above
 def getSpeechRecognition():
     r = sr.Recognizer()
-    voice = sr.AudioFile('record.wav')
+    voice = sr.AudioFile('recording/br.wav')
     with voice as source:
         r.adjust_for_ambient_noise(source)
         audio = r.record(source)
@@ -58,9 +58,9 @@ def getSpeechRecognition():
 
 def getProcessedSpeech():
     speech = getSpeechRecognition()
-
+    '''
     if((not speech.startswith('add') )and (not speech.startswith('remove'))):
-        return False
+        return False'''
 
     # STRING PROCESSING
 

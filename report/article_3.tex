@@ -1,0 +1,132 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Stylish Article
+% LaTeX Template
+% Version 2.2 (2020-10-22)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Mathias Legrand (legrand.mathias@gmail.com) 
+% With extensive modifications by:
+% Vel (vel@latextemplates.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[fleqn,10pt]{SelfArx} % Document font size and equations flushed left
+
+\usepackage[english]{babel} % Specify a different language here - english by default
+
+\usepackage{lipsum} % Required to insert dummy text. To be removed otherwise
+
+%----------------------------------------------------------------------------------------
+%	COLUMNS
+%----------------------------------------------------------------------------------------
+
+\setlength{\columnsep}{0.55cm} % Distance between the two columns of text
+\setlength{\fboxrule}{0.75pt} % Width of the border around the abstract
+
+%----------------------------------------------------------------------------------------
+%	COLORS
+%----------------------------------------------------------------------------------------
+
+\definecolor{color1}{RGB}{0,0,90} % Color of the article title and sections
+\definecolor{color2}{RGB}{0,20,20} % Color of the boxes behind the abstract and headings
+
+%----------------------------------------------------------------------------------------
+%	HYPERLINKS
+%----------------------------------------------------------------------------------------
+
+\usepackage{hyperref} % Required for hyperlinks
+
+\hypersetup{
+	hidelinks,
+	colorlinks,
+	breaklinks=true,
+	urlcolor=color2,
+	citecolor=color1,
+	linkcolor=color1,
+	bookmarksopen=false,
+	pdftitle={Title},
+	pdfauthor={Author},
+}
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE INFORMATION
+%----------------------------------------------------------------------------------------
+
+\JournalInfo{Anthony Sander} % Journal information
+\Archive{Class Project} % Additional notes (e.g. copyright, DOI, review/research article)
+
+\PaperTitle{AI TODO Personal Assistant} % Article title
+
+\Authors{Basma Ashour  \textsuperscript{}, Saloni Vora\textsuperscript{}} % Authors
+\affiliation{\textsuperscript{1}\textit{MIU, Computer Science}} % Author affiliation
+
+\Keywords{Torch --- Wav2Vec --- NLP --- WakeWord} % Keywords - if you don't want any simply remove all the text between the curly brackets
+\newcommand{\keywordname}{Keywords} % Defines the keywords heading name
+
+%----------------------------------------------------------------------------------------
+%	ABSTRACT
+%----------------------------------------------------------------------------------------
+
+\Abstract{In this paper we are gonna discuss how we build a speech recognition system with the wake word to detect what the user is saying and based on that we can add a new To-Do or remove a To-Do, the input is a record voice and the output is add/remove or todo or do nothing if it couldn't detect the speech or the user gave a command which is not add/remove}
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+\maketitle % Output the title and abstract box
+
+\tableofcontents % Output the contents section
+
+\thispagestyle{empty} % Removes page numbering from the first page
+
+%----------------------------------------------------------------------------------------
+%	ARTICLE CONTENTS
+%----------------------------------------------------------------------------------------
+
+\section*{Introduction} % The \section*{} command stops section numbering
+
+\addcontentsline{toc}{section}{Introduction} % Adds this section to the table of contents
+
+
+%------------------------------------------------
+
+
+%------------------------------------------------
+
+\section{Wake Word}
+
+
+%------------------------------------------------
+\section{Speech Recognition}
+
+
+%------------------------------------------------
+
+\section{Restful apis}
+
+1st api: to detect the record [speech recognition] based on Wave2Vec Bert \\
+2nd api: to make string processing to process the text from the recording  \\
+3rd api: to show the result add/remove a To-Do based on the text or do nothing
+
+%------------------------------------------------
+\section{UI}
+
+We used the Flask template to show the record a voice and then based on that voice add/remove a todo    
+%------------------------------------------------
+
+\section{Docker}
+We used docker to ship the system, we generated the dockers files to be compatible with Flask.
+
+%------------------------------------------------
+
+\end{document}

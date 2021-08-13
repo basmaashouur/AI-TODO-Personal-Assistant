@@ -1,0 +1,2 @@
+Basma Ashour: wav2vec, SpeechRecognition, apis, ui, Docker, latex report
+Saloni Vora: Wake word, latex report
